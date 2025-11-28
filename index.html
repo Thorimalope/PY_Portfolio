@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Happy+Monkey&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Share+Tech&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio site</title>
+  </head>
+  <body>
+    <section class="intro-section">
+      <div id="tsparticles"></div>
+      <div id="header">
+        <img id="logo" src="./assets/portfolio logo.png" />
+
+        <div id="header-content">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+        </div>
+      </div>
+
+      <div class="intro-content">
+        <div id="content">
+          <h1>Hi, Im Thori</h1>
+
+          <p>
+            Hi, I'm Thoriso Malope, a passionate and adaptable front-end
+            developer currently wrapping up my Software Development course at
+            CodeSpace Academy. With a solid foundation in HTML, CSS, Tailwind,
+            JavaScript, and React, I enjoy building responsive, user-friendly
+            web experiences. I'm currently open to junior developer roles,
+            internships, and freelance opportunities, and I'm always eager to
+            collaborate on meaningful projects that help me grow and make an
+            impact. Lets build something great together!
+          </p>
+
+          <p id="location" class="info-item">
+            <img
+              class="icon"
+              src="./assets/location-pin-alt-1-svgrepo-com.svg"
+            />
+            South Africa
+          </p>
+
+          <p id="status" class="info-item">
+            <img class="icon" src="./assets/dot-half-svgrepo-com.svg" />
+            Open to work!
+          </p>
+
+          <div id="link-icons" class="info-item">
+            <img
+              class="icon"
+              src="./assets/github-svgrepo-com.svg"
+              href="https://github.com/Thorimalope"
+            />
+            <img class="icon" src="./assets/gmail-svgrepo-com.svg" />
+          </div>
+        </div>
+
+        <div id="profile-img">
+          <img
+            id="p-img"
+            src="./assets/thori-profile.jpg"
+            alt="profile-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div id="about-me-card">About Me</div>
+      <div class="about-content">
+        <img
+          id="self-profile"
+          src="./assets/self profile.jpg"
+          alt="full-body-profile"
+        />
+        <div id="about-me-paragraph">
+          <h1>Nice to meet you too...</h1>
+          <p>
+            Nice to meet you! I'm Thori, a newcomer to the tech space with a
+            lifelong passion for building things—just ask my childhood Bob the
+            Builder bed covers. In early 2025, I officially began my journey
+            into Software Development at CodeSpace Academy, and I’ve been hooked
+            ever since. From my first line of HTML to fetching data with React,
+            each step has reinforced my love for front-end development. I’ve
+            grown confident in HTML, CSS, JavaScript, and React.js, and I
+            continue to sharpen those skills through hands-on projects that
+            reflect real-world challenges. At CodeSpace, I completed a full-time
+            program focused on web development fundamentals, modern JavaScript
+            practices, and building responsive, dynamic web applications. I also
+            worked on collaborative coding projects that helped me grow both
+            technically and as a teammate. Whether it's crafting a clean UI,
+            creating interactive DOM elements, or integrating APIs, I approach
+            each challenge with curiosity and determination. I’m constantly
+            learning, experimenting, and building. I'm currently looking for
+            intern or junior developer opportunities where I can contribute,
+            grow, and continue transforming into the developer I aspire to be.
+            Want to see what I’ve built so far? Check out the projects below.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tech-stack-section" id="skills">
+      <div id="tech-stack-card">Skills</div>
+      <div class="stack-icons">
+        <img src="./assets/javascript-svgrepo-com.svg" />
+        <img src="./assets/react-svgrepo-com.svg" />
+        <img src="./assets/html-fill-svgrepo-com.svg" />
+        <img src="./assets/css-3-svgrepo-com.svg" />
+        <img src="./assets/tailwind-svgrepo-com.svg" />
+        <img src="./assets/git-svgrepo-com.svg" />
+        <img src="./assets/canva-svgrepo-com.svg" />
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div id="project-section-card">Projects</div>
+      <div id="project-example-card">
+        <img
+          id="kanban-screenshot"
+          src="./assets/kanban board screenshot.png"
+        />
+        <div class="project-example-content">
+          <h3>Kanban board</h3>
+          <p>
+            A simple, interactive Kanban board web app built with HTML, CSS, and
+            JavaScript. It allows users to create, view, edit and delete tasks
+            across three columns: TODO, DOING, and DONE. Tasks are saved in
+            localStorage, so they persist across page reloads. Users can also
+            switch between a light and dark these as well as show and hide the
+            sidebar as they wish with theme toggle and create task functions
+            still available for mobile users
+          </p>
+          <a href="https://thomal-25130-fto2502-b2-thoriso-mal.vercel.app/"
+            >Click here to visit Kanban Board</a
+          >
+        </div>
+      </div>
+
+      <div id="project-example-card">
+        <img
+          id="React-podcast-screenshot"
+          src="./assets/omnipod screenshot.png"
+        />
+        <div class="project-example-content">
+          <h3>React Podcast App</h3>
+          <p>
+            This is a React-based web application that allows users to browse
+            and play podcast episodes, and mark their favourite episodes for
+            easy access. Users can also filter their favourite episodes by the
+            date they were added (newest to oldest or vice versa).
+          </p>
+          <a href="https://thomal-25130-f-to2502-b-thoriso-mal.vercel.app/"
+            >Click here To see Podcast App</a
+          >
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="particles.js"></script>
+  </body>
+</html>
