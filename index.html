@@ -1,170 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Thori — Portfolio</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Happy+Monkey&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Share+Tech&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Jost:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Portfolio site</title>
-  </head>
-  <body>
-    <div id="tsparticles"></div>
-    <section class="intro-section">
-      <div id="header">
-        <img id="logo" src="./assets/portfolio logo.png" />
 
-        <div id="header-content">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- tsParticles (optional) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"
+      defer
+    ></script>
+    <script src="particles.js" defer></script>
+  </head>
+
+  <body>
+    <!-- particles container (keeps your existing particles.js) -->
+    <div id="tsparticles" aria-hidden="true"></div>
+
+    <!-- Page wrapper -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home">
+          <img src="./assets/portfolio logo.png" alt="Thori logo" />
+          <span>Thori</span>
+        </a>
+
+        <nav class="nav" role="navigation" aria-label="Main">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-        </div>
+          <a href="#contact" class="cta">Contact</a>
+        </nav>
+
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+          🌙
+        </button>
       </div>
+    </header>
 
-      <div class="intro-content">
-        <div id="content">
-          <h1>Hi, Im Thori</h1>
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero section reveal">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 class="headline">Hi — I’m <span class="accent">Thori</span></h1>
+            <p class="lead">
+              I build clean, responsive front-end experiences using HTML, CSS,
+              JavaScript and React. I’m finishing my Software Development course
+              at CodeSpace Academy and looking for junior roles & internships.
+            </p>
 
-          <p>
-            Hi, I'm Thoriso Malope, a passionate and adaptable front-end
-            developer currently wrapping up my Software Development course at
-            CodeSpace Academy. With a solid foundation in HTML, CSS, Tailwind,
-            JavaScript, and React, I enjoy building responsive, user-friendly
-            web experiences. I'm currently open to junior developer roles,
-            internships, and freelance opportunities, and I'm always eager to
-            collaborate on meaningful projects that help me grow and make an
-            impact. Lets build something great together!
-          </p>
+            <ul class="meta-list">
+              <li>
+                <img src="./assets/location-pin-alt-1-svgrepo-com.svg" alt="" />
+                South Africa
+              </li>
+              <li>
+                <img src="./assets/dot-half-svgrepo-com.svg" alt="" /> Open to
+                work
+              </li>
+            </ul>
 
-          <p id="location" class="info-item">
-            <img
-              class="icon"
-              src="./assets/location-pin-alt-1-svgrepo-com.svg"
-            />
-            South Africa
-          </p>
+            <div class="hero-cta">
+              <a class="btn" href="#projects">See projects</a>
+              <a class="btn ghost" href="#about">About me</a>
+            </div>
 
-          <p id="status" class="info-item">
-            <img class="icon" src="./assets/dot-half-svgrepo-com.svg" />
-            Open to work!
-          </p>
+            <div class="social-row">
+              <a href="https://github.com/Thorimalope" aria-label="Github">
+                <img src="./assets/github-svgrepo-com.svg" alt="GitHub" />
+              </a>
+              <a href="mailto:your.email@example.com" aria-label="Email">
+                <img src="./assets/gmail-svgrepo-com.svg" alt="Email" />
+              </a>
+            </div>
+          </div>
 
-          <div id="link-icons" class="info-item">
-            <img
-              class="icon"
-              src="./assets/github-svgrepo-com.svg"
-              href="https://github.com/Thorimalope"
-            />
-            <img class="icon" src="./assets/gmail-svgrepo-com.svg" />
+          <div class="hero-profile">
+            <div class="profile-frame">
+              <img
+                id="p-img"
+                src="./assets/thori-profile.jpg"
+                alt="Thori profile"
+              />
+            </div>
           </div>
         </div>
+      </section>
 
-        <div id="profile-img">
-          <img
-            id="p-img"
-            src="./assets/thori-profile.jpg"
-            alt="profile-image"
-          />
+      <!-- ABOUT -->
+      <section id="about" class="about section reveal">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-badge">About</span>
+            <h2>Nice to meet you — here’s my story</h2>
+          </div>
+
+          <div class="about-grid">
+            <img
+              id="self-profile"
+              src="./assets/self profile.jpg"
+              alt="Full body profile"
+              class="about-photo"
+            />
+
+            <div class="about-text">
+              <p>
+                I'm Thori — I fell in love with building things as a kid and now
+                I build interfaces. I started learning front-end development
+                seriously at CodeSpace Academy in early 2025 and have been
+                building projects with HTML, CSS, JavaScript and React ever
+                since. I enjoy creating clean UIs, solving layout problems, and
+                improving user experiences.
+              </p>
+
+              <p>
+                I work well in teams, practice version control with Git and
+                enjoy using AI tools to speed up repetitive work. I’m looking
+                for opportunities where I can contribute, learn, and grow as a
+                developer.
+              </p>
+
+              <a class="btn" href="#projects">View my work</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="about-section" id="about">
-      <div id="about-me-card">About Me</div>
-      <div class="about-content">
-        <img
-          id="self-profile"
-          src="./assets/self profile.jpg"
-          alt="full-body-profile"
-        />
-        <div id="about-me-paragraph">
-          <h1>Nice to meet you too...</h1>
-          <p>
-            Nice to meet you! I'm Thori, a newcomer to the tech space with a
-            lifelong passion for building things—just ask my childhood Bob the
-            Builder bed covers. In early 2025, I officially began my journey
-            into Software Development at CodeSpace Academy, and I’ve been hooked
-            ever since. From my first line of HTML to fetching data with React,
-            each step has reinforced my love for front-end development. I’ve
-            grown confident in HTML, CSS, JavaScript, and React.js, and I
-            continue to sharpen those skills through hands-on projects that
-            reflect real-world challenges. At CodeSpace, I completed a full-time
-            program focused on web development fundamentals, modern JavaScript
-            practices, and building responsive, dynamic web applications. I also
-            worked on collaborative coding projects that helped me grow both
-            technically and as a teammate. Whether it's crafting a clean UI,
-            creating interactive DOM elements, or integrating APIs, I approach
-            each challenge with curiosity and determination. I’m constantly
-            learning, experimenting, and building. I'm currently looking for
-            intern or junior developer opportunities where I can contribute,
-            grow, and continue transforming into the developer I aspire to be.
-            Want to see what I’ve built so far? Check out the projects below.
+      <!-- SKILLS / TECH STACK -->
+      <section id="skills" class="tech section reveal">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-badge">Skills</span>
+            <h2>Technologies I use</h2>
+          </div>
+
+          <p class="subtle">
+            Hover any icon to see a micro animation — scroll to reveal them.
           </p>
-        </div>
-      </div>
-    </section>
 
-    <section class="tech-stack-section" id="skills">
-      <div id="tech-stack-card">Skills</div>
-      <div class="stack-icons">
-        <img src="./assets/javascript-svgrepo-com.svg" />
-        <img src="./assets/react-svgrepo-com.svg" />
-        <img src="./assets/html-fill-svgrepo-com.svg" />
-        <img src="./assets/css-3-svgrepo-com.svg" />
-        <img src="./assets/tailwind-svgrepo-com.svg" />
-        <img src="./assets/git-svgrepo-com.svg" />
-        <img src="./assets/canva-svgrepo-com.svg" />
-      </div>
-    </section>
-
-    <section class="projects" id="projects">
-      <div id="project-section-card">Projects</div>
-      <div id="project-example-card">
-        <img
-          id="kanban-screenshot"
-          src="./assets/kanban board screenshot.png"
-        />
-        <div class="project-example-content">
-          <h3>Kanban board</h3>
-          <p>
-            A simple, interactive Kanban board web app built with HTML, CSS, and
-            JavaScript. It allows users to create, view, edit and delete tasks
-            across three columns: TODO, DOING, and DONE. Tasks are saved in
-            localStorage, so they persist across page reloads. Users can also
-            switch between a light and dark these as well as show and hide the
-            sidebar as they wish with theme toggle and create task functions
-            still available for mobile users
-          </p>
-          <a href="https://thomal-25130-fto2502-b2-thoriso-mal.vercel.app/"
-            >Click here to visit Kanban Board</a
-          >
+          <div class="tech-grid" aria-hidden="false">
+            <!-- keep the same filenames -->
+            <div class="tech-card">
+              <img src="./assets/html-fill-svgrepo-com.svg" alt="HTML" />
+              <span>HTML</span>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/css-3-svgrepo-com.svg" alt="CSS" />
+              <span>CSS</span>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/javascript-svgrepo-com.svg" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/react-svgrepo-com.svg" alt="React" />
+              <span>React</span>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/tailwind-svgrepo-com.svg" alt="Tailwind" />
+              <span>Tailwind</span>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/git-svgrepo-com.svg" alt="Git" />
+              <span>Git</span>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/canva-svgrepo-com.svg" alt="Canva" />
+              <span>Canva</span>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div id="project-example-card">
-        <img
-          id="React-podcast-screenshot"
-          src="./assets/omnipod screenshot.png"
-        />
-        <div class="project-example-content">
-          <h3>React Podcast App</h3>
-          <p>
-            This is a React-based web application that allows users to browse
-            and play podcast episodes, and mark their favourite episodes for
-            easy access. Users can also filter their favourite episodes by the
-            date they were added (newest to oldest or vice versa).
-          </p>
-          <a href="https://thomal-25130-f-to2502-b-thoriso-mal.vercel.app/"
-            >Click here To see Podcast App</a
-          >
+      <!-- PROJECTS -->
+      <section id="projects" class="projects section reveal">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-badge">Projects</span>
+            <h2>Selected work</h2>
+          </div>
+
+          <div class="project-list">
+            <article class="project-card">
+              <img
+                src="./assets/kanban board screenshot.png"
+                alt="Kanban board screenshot"
+              />
+              <div class="project-body">
+                <h3>Kanban Board</h3>
+                <p>
+                  A dynamic Kanban board built with vanilla JS. Create, edit,
+                  move tasks across columns, and save to localStorage. Includes
+                  theme toggle and mobile-friendly interactions.
+                </p>
+                <a
+                  class="link"
+                  href="https://thomal-25130-fto2502-b2-thoriso-mal.vercel.app/"
+                  >Live demo</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="./assets/omnipod screenshot.png"
+                alt="Podcast app screenshot"
+              />
+              <div class="project-body">
+                <h3>React Podcast App</h3>
+                <p>
+                  React app to browse and play podcast episodes, save favorites,
+                  and filter by date. Built with React + component-driven UI.
+                </p>
+                <a
+                  class="link"
+                  href="https://thomal-25130-f-to2502-b-thoriso-mal.vercel.app/"
+                  >Live demo</a
+                >
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <!-- CONTACT / FOOTER -->
+      <section id="contact" class="contact section reveal">
+        <div class="container contact-grid">
+          <div>
+            <h3>Let's build something</h3>
+            <p>
+              I'm available for junior roles, internships and freelance
+              projects.
+            </p>
+            <a class="btn" href="mailto:your.email@example.com">Get in touch</a>
+          </div>
+
+          <div class="mini-contact">
+            <p><strong>Email</strong></p>
+            <p>your.email@example.com</p>
+            <p><strong>Location</strong></p>
+            <p>South Africa</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          &copy; <span id="year"></span> Thori — Built with ❤️ & JavaScript.
+        </p>
       </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-    <script src="particles.js"></script>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js" defer></script>
   </body>
 </html>
